@@ -81,7 +81,6 @@
     "@types/node": "^16.0.0",
     "css-loader": "^6.7.3",
     "find-up": "^5.0.0",
-    "fs-extra": "^11.1.0",
     "image-size": "^1.0.0",
     "loader-utils": "^3.2.0",
     "node-polyfill-webpack-plugin": "^2.0.1",
