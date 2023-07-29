@@ -2942,7 +2942,6 @@ __metadata:
     "@types/ejs": ^3.1.1
     "@types/escodegen": ^0.0.6
     "@types/express": ^4.17.11
-    "@types/fs-extra": ^11.0.1
     "@types/http-server": ^0.12.1
     "@types/lodash": ^4
     "@types/node": ^16.0.0
@@ -2985,7 +2984,6 @@ __metadata:
     fast-folder-size: ^2.1.0
     fast-glob: ^3.2.12
     find-up: ^5.0.0
-    fs-extra: ^11.1.0
     github-release-from-changelog: ^2.1.1
     glob: ^10.0.0
     http-server: ^14.1.1
@@ -3465,16 +3463,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/fs-extra@npm:^11.0.1":
-  version: 11.0.1
-  resolution: "@types/fs-extra@npm:11.0.1"
-  dependencies:
-    "@types/jsonfile": "*"
-    "@types/node": "*"
-  checksum: a65f1fae47849fe1a17441dcabc9400390303405972ff3cbb3578746cea8916b23d5e7652bf57a87767f75a9b2f37caac499b78b5230ae08fef0ba58b34c3a85
-  languageName: node
-  linkType: hard
-
 "@types/glob@npm:^7.1.1":
   version: 7.2.0
   resolution: "@types/glob@npm:7.2.0"
@@ -3590,15 +3578,6 @@ __metadata:
   version: 0.0.29
   resolution: "@types/json5@npm:0.0.29"
   checksum: 6bf5337bc447b706bb5b4431d37686aa2ea6d07cfd6f79cc31de80170d6ff9b1c7384a9c0ccbc45b3f512bae9e9f75c2e12109806a15331dc94e8a8db6dbb4ac
-  languageName: node
-  linkType: hard
-
-"@types/jsonfile@npm:*":
-  version: 6.1.1
-  resolution: "@types/jsonfile@npm:6.1.1"
-  dependencies:
-    "@types/node": "*"
-  checksum: 96dfca37e856978eaf256bf5200c46a01a27a0455b9323a72598e8d59ddd81095934bf15e9c84d6a30125cf63e1464aef6d70ab4a35f34ee2cdfa1fe0db0720b
   languageName: node
   linkType: hard
 

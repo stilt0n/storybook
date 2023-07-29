@@ -3,7 +3,7 @@
 import { nodeJsRequirement } from './nodejs-requirement';
 
 // eslint-disable-next-line global-require, jest/no-mocks-import
-jest.mock('fs-extra', () => require('../../../../../__mocks__/fs-extra'));
+jest.mock('node:fs/promises', () => require('../../../../../__mocks__/fs-promises'));
 
 const check = async ({ storybookVersion = '7.0.0' }) => {
   return nodeJsRequirement.check({

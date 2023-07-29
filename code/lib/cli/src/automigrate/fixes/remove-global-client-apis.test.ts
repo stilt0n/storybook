@@ -6,12 +6,12 @@ import type { JsPackageManager } from '../../js-package-manager';
 import { RemovedAPIs, removedGlobalClientAPIs as migration } from './remove-global-client-apis';
 
 // eslint-disable-next-line global-require, jest/no-mocks-import
-jest.mock('fs-extra', () => require('../../../../../__mocks__/fs-extra'));
+jest.mock('node:fs/promises', () => require('../../../../../__mocks__/fs-promises'));
 
 const check = async ({ contents, previewConfigPath }: any) => {
   if (contents) {
     // eslint-disable-next-line global-require
-    require('fs-extra').__setMockFiles({
+    require('node:fs/promises').__setMockFiles({
       [path.join('.storybook', 'preview.js')]: contents,
     });
   }

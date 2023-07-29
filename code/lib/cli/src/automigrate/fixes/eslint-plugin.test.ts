@@ -5,7 +5,7 @@ import { eslintPlugin } from './eslint-plugin';
 import { makePackageManager } from '../helpers/testing-helpers';
 
 // eslint-disable-next-line global-require, jest/no-mocks-import
-jest.mock('fs-extra', () => require('../../../../../__mocks__/fs-extra'));
+jest.mock('node:fs/promises', () => require('../../../../../__mocks__/fs-promises'));
 
 const checkEslint = async ({
   packageJson,
@@ -17,7 +17,7 @@ const checkEslint = async ({
   eslintExtension?: string;
 }) => {
   // eslint-disable-next-line global-require
-  require('fs-extra').__setMockFiles({
+  require('node:fs/promises').__setMockFiles({
     [`.eslintrc.${eslintExtension}`]: !hasEslint
       ? null
       : dedent(`

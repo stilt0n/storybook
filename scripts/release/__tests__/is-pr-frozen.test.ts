@@ -4,17 +4,17 @@ import path from 'path';
 import { run as isPrFrozen } from '../is-pr-frozen';
 
 // eslint-disable-next-line jest/no-mocks-import
-jest.mock('fs-extra', () => require('../../../code/__mocks__/fs-extra'));
+jest.mock('node:fs/promises', () => require('../../../code/__mocks__/fs-promises'));
 jest.mock('../utils/get-github-info');
 
-const fsExtra = require('fs-extra');
+const fsPromises = require('node:fs/promises');
 const simpleGit = require('simple-git');
 const { getPullInfoFromCommit } = require('../utils/get-github-info');
 
 const CODE_DIR_PATH = path.join(__dirname, '..', '..', '..', 'code');
 const CODE_PACKAGE_JSON_PATH = path.join(CODE_DIR_PATH, 'package.json');
 
-fsExtra.__setMockFiles({
+fsPromises.__setMockFiles({
   [CODE_PACKAGE_JSON_PATH]: JSON.stringify({ version: '1.0.0' }),
 });
 

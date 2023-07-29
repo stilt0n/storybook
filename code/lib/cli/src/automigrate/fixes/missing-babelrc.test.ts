@@ -6,7 +6,7 @@ import { missingBabelRc } from './missing-babelrc';
 import type { JsPackageManager } from '../../js-package-manager';
 
 // eslint-disable-next-line global-require, jest/no-mocks-import
-jest.mock('fs-extra', () => require('../../../../../__mocks__/fs-extra'));
+jest.mock('node:fs/promises', () => require('../../../../../__mocks__/fs-promises'));
 
 const babelContent = JSON.stringify({
   sourceType: 'unambiguous',
@@ -40,7 +40,7 @@ const check = async ({
 }) => {
   if (extraFiles) {
     // eslint-disable-next-line global-require
-    require('fs-extra').__setMockFiles(extraFiles);
+    require('node:fs/promises').__setMockFiles(extraFiles);
   }
 
   return missingBabelRc.check({
